@@ -1,5 +1,5 @@
 [package]
-name = "tracing-appender"
+name = "tracing-appender-timezone"
 version = "0.2.4"
 authors = [
     "Zeki Sherif <zekshi@amazon.com>",
@@ -7,10 +7,10 @@ authors = [
 ]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/tokio-rs/tracing"
+repository = "https://github.com/loongclaw/tracing"
 homepage = "https://tokio.rs"
 description = """
-Provides utilities for file appenders and making non-blocking writers.
+扩展 tracing-appender，使用显式指定的自定义时区（替代默认 UTC）生成滚动日志文件名，并将时区偏移（+HHMM）纳入命名规则，避免夏令时切换导致的日志冲突。
 """
 categories = [
     "development-tools::debugging",
@@ -28,14 +28,14 @@ parking_lot = { optional = true, version = "0.12.1" }
 thiserror = "2"
 
 [dependencies.tracing-subscriber]
-path = "../tracing-subscriber"
+# path = "../tracing-subscriber"
 version = "0.3.18"
 default-features = false
 features = ["fmt", "std"]
 
 [dev-dependencies]
 criterion = { version = "0.3.6", default-features = false }
-tracing = { path = "../tracing", version = "0.1.35" }
+tracing = { version = "0.1.35" }
 tempfile = "3"
 
 [[bench]]

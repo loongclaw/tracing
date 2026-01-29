@@ -5,6 +5,7 @@ use std::{
 };
 use tracing::{event, Level};
 use tracing_appender::non_blocking;
+use tracing_appender_timezone as tracing_appender;
 use tracing_subscriber::fmt::MakeWriter;
 
 // a no-op writer is used in order to measure the overhead incurred by
