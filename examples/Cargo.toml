@@ -20,7 +20,7 @@ tracing-subscriber = { path = "../tracing-subscriber", version = "0.3.0", featur
 tracing-futures = { version = "0.2.1", path = "../tracing-futures", features = ["futures-01"] }
 tracing-attributes = { path = "../tracing-attributes", version = "0.1.22" }
 tracing-serde = { path = "../tracing-serde" }
-tracing-appender = { path = "../tracing-appender", version = "0.2.0" }
+tracing-appender = { path = "../tracing-appender", version = "0.2.0", package = "tracing-appender-timezone" }
 tracing-journald = { path = "../tracing-journald" }
 
 # serde example
